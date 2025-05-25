@@ -3,29 +3,110 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Protecting Our Planet</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>EcoWorld 🌍</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #2c7a7b;
+      padding: 40px 20px;
+      text-align: center;
+      color: white;
+      border-radius: 0 0 10px 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    header p {
+      margin-top: 10px;
+      font-size: 1.2em;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .title {
+      font-size: 1.6em;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #2d3748;
+    }
+
+    .content {
+      font-size: 1.05em;
+      line-height: 1.6;
+      color: #333;
+      max-height: 220px;
+      overflow: hidden;
+      position: relative;
+      transition: max-height 0.4s ease-in-out;
+    }
+
+    .content.expanded {
+      max-height: 1000px;
+    }
+
+    .read-more-btn {
+      margin-top: 15px;
+      background-color: #2b6cb0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .read-more-btn:hover {
+      background-color: #2c5282;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <img src="https://images.unsplash.com/photo-1508780709619-79562169bc64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&q=80" alt="Environment Banner" />
+
+  <header>
+    <h1>EcoWorld 🌍</h1>
+    <p>Learn. Care. Act for the Planet.</p>
   </header>
 
-  <main class="content">
-    <h1>Protecting Our Planet: Pooja Design A Call for Environmental Action</h1>
-    <p class="meta">By Jane Doe | May 25, 2025</p>
+  <div class="container">
+    <div class="title">What is the Environment?</div>
+    <div id="envContent" class="content">
+      The environment refers to everything that surrounds us: the air we breathe, the water we drink, the soil we grow food in, and the ecosystems we live in. It includes both natural and human-made elements. <br><br>
+      A healthy environment is essential for all living beings. Forests provide oxygen, regulate temperature, and support biodiversity. Oceans regulate climate and are home to millions of species. Rivers give us freshwater, and soil helps grow our food.<br><br>
+      However, human activities have started to disrupt nature’s balance. Deforestation, pollution, overuse of plastic, industrialization, and carbon emissions are leading to climate change, loss of species, and health issues.<br><br>
+      Global warming is one of the most serious challenges today. It results in rising temperatures, melting glaciers, rising sea levels, and extreme weather like floods and droughts.<br><br>
+      Air pollution from vehicles and factories is causing respiratory diseases. Water pollution harms aquatic life and affects drinking water sources. Soil pollution impacts food quality.<br><br>
+      Deforestation leads to loss of habitat for animals and reduces oxygen levels. Urbanization and mining destroy landscapes and cause imbalance in local climates.<br><br>
+      Sustainability is the solution. It means using resources wisely so future generations can live well too. This includes switching to renewable energy like solar and wind, planting trees, conserving water, and recycling waste.<br><br>
+      Governments, organizations, and individuals all play a role. Global agreements like the Paris Climate Accord aim to reduce greenhouse gases. NGOs plant trees and clean rivers. Citizens are adopting eco-friendly habits like cycling, reducing plastic, and conserving energy.<br><br>
+      Young people are becoming environmental advocates. Schools are teaching about climate change and organizing clean-up drives. Technology is also helping—green buildings, electric cars, and sustainable farming are great examples.<br><br>
+      Every small step matters. Turn off lights when not needed. Avoid plastic bags. Walk or cycle for short distances. Plant a tree. These may seem minor, but collectively they have a big impact.<br><br>
+      The environment is not someone else's responsibility. It’s ours. Let’s protect nature, not just for animals or plants, but for our health, future, and peace of mind. <br><br>
+      As Greta Thunberg said, “You are never too small to make a difference.”<br><br>
+      Together, we can restore our planet. Let’s make Earth a better place to live for all.
+    </div>
+    <button class="read-more-btn" onclick="toggleReadMore()">Read more</button>
+  </div>
 
-    <p class="intro">
-      Our environment is facing serious challenges — from climate change to deforestation, plastic pollution, and biodiversity loss. We are at a tipping point.
-      <span class="more-text">
-        Every small action matters. Choosing to recycle, reducing waste, conserving water, and switching to renewable energy sources are steps anyone can take. Governments and industries must also take responsibility by creating sustainable policies and investing in green technology.
-        <br /><br />
-        The time to act is now. The health of our planet directly impacts our future generations.
-      </span>
-    </p>
-    <button class="read-more">Read More</button>
-  </main>
+  <script>
+    function toggleReadMore() {
+      const content = document.getElementById("envContent");
+      const btn = document.querySelector(".read-more-btn");
+      content.classList.toggle("expanded");
+      btn.textContent = content.classList.contains("expanded") ? "Read less" : "Read more";
+    }
+  </script>
 
-  <script src="script.js"></script>
 </body>
 </html>
